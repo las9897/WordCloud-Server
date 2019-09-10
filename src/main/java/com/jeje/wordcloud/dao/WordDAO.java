@@ -1,4 +1,4 @@
-package com.jeje.wordcloud.entity;
+package com.jeje.wordcloud.dao;
 
 import lombok.Builder;
 import lombok.Getter;
@@ -11,7 +11,7 @@ import javax.validation.constraints.NotNull;
 @Table
 @Getter
 @NoArgsConstructor
-public class WordEntity {
+public class WordDAO {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -24,7 +24,7 @@ public class WordEntity {
     private int frequency;
 
     @Builder
-    public WordEntity(@NotNull String word, int frequency) {
+    public WordDAO(@NotNull String word, int frequency) {
         this.word = word;
         this.frequency = frequency;
     }

@@ -20,6 +20,7 @@ configurations {
 
 repositories {
     mavenCentral()
+    jcenter()
 }
 
 dependencies {
@@ -38,6 +39,9 @@ dependencies {
     //custom
     compile group: 'edu.uci.ics', name: 'crawler4j', version: '4.4.0'
     compile group: 'org.jsoup', name: 'jsoup', version: '1.12.1'
+    compile group: 'com.squareup.retrofit2', name: 'retrofit', version: '2.6.1'
+    compile group: 'com.squareup.retrofit2', name: 'converter-jackson', version: '2.6.1'
+
 
 
 }
