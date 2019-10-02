@@ -7,7 +7,5 @@ import org.springframework.data.jpa.repository.Query;
 import java.util.List;
 
 public interface PostRepository extends JpaRepository<PostEntity, Long> {
-    @Query("SELECT p FROM  PostEntity  p WHERE MONTH({d '})")
-    List<PostEntity> findAll();
 
 }

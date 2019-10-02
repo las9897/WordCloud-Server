@@ -10,14 +10,17 @@ import java.util.Date;
 
 @Entity
 @Getter
+@Setter
 @ToString
 @Table(name = "TB_COMMENT")
 public class CommentEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ID")
     private Long id;
 
+    @Lob
     @Column(name = "CONTENT")
     private String content;
 

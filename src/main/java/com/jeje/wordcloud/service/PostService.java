@@ -8,8 +8,8 @@ import org.springframework.stereotype.Service;
 import java.util.Date;
 import java.util.List;
 
-@Service
 public interface PostService {
+    void save(PostEntity post);
     List<PostEntity> getPostListByCreateDate(Date create_date);
 
 }

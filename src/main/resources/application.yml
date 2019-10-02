@@ -1,0 +1,17 @@
+server:
+  address: localhost
+  port: 8080
+spring:
+  jpa:
+    hibernate:
+      use-new-id-generator-mappings: false
+      ddl-auto: create
+    show-sql: true # API 호출시 SQl문을 콘솔에 출력
+    generate-ddl: true # DDL 정의시 데이터베이스의 고유 기능을 사용 ex) CREATE TABLE, DELETE etc...
+    database: mysql
+  ## MYSQL SETTING
+  datasource:
+    url: jdbc:mysql://localhost:3306/wordcloud?characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: password
+    driver-class-name: com.mysql.cj.jdbc.Driver
