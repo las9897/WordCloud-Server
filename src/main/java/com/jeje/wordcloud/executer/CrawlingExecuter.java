@@ -28,15 +28,16 @@ public class CrawlingExecuter {
     private int check = 1;
 
 
-    @Scheduled(cron = "0 * * * * ?")
+    @Scheduled(cron = "0 0/2 * * * ?")
     public void getPostComment() {
-        if (check >= 600000) return;
+        if (check >= 630000) return;
         for (int i = 0; i < 100; i++) {
             logger.info("crawling: {}", BASE_URL + check);
             try {
                 Thread.sleep(3000);
                 Post post = JsoupCrawler.crawling(BASE_URL + check);
-                postService.save(converter.convert(post));
+                if(post != null)
+                    postService.save(converter.convert(post));
             } catch (Exception e) {
                 e.printStackTrace();
             }
